@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmetic & Makeup Course</title>
+<style>
+    /* General Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Header */
+    header {
+        background-color: #fff;
+        padding: 20px 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+        font-size: 24px;
+        color: #333;
+        margin: 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #666;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #ff007f; /* Pink color */
+    }
+
+   /* Hero Section */
+.hero {
+ background-image: url('hero.png'); /* Add background image */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+    .hero h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hero a {
+        display: inline-block;
+        background-color: #ff007f;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero a:hover {
+        background-color: #ff0055; /* Darker pink color */
+    }
+
+    /* Course Details */
+    .course-details {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
+
+    .course-details h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .course-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .course-card {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+
+    .course-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        padding: 50px 0;
+        background-color: #f9f9f9;
+    }
+
+    .testimonial-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .testimonial-card {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #fff;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        header {
+            padding: 20px;
+        }
+
+        .hero {
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+        }
+
+        .course-details {
+            padding: 30px 0;
+        }
+
+        .course-cards {
+            flex-direction: column;
+        }
+
+        .course-card {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .testimonials {
+            padding: 30px 0;
+        }
+
+        .testimonial-cards {
+            flex-direction: column;
+        }
+
+        .testimonial-card {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            padding: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h1>Cosmetic & Makeup Course</h1>
+        <style>
+            /* Hide the form by default */
+            #enrollmentForm {
+                display: none;
+            }
+        </style>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Instructors</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-weight: bold;">Master the Art of Makeup</h2>
+        <p style="font-weight: bold;">Become a Certified Beauty Professional and unleash your creativity.</p>
+        <a href="#" onclick="showEnrollmentForm(); return false;" style="font-weight: bold;">Enroll Now</a>
+    </div>
+</section>
+
+<!-- Enrollment Form -->
+<div id="enrollmentForm" style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc;">
+    <h3>Enrollment Form</h3>
+    <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course">
+            <option value="Makeup Basics">Makeup Basics</option>
+            <option value="Advanced Techniques">Advanced Techniques</option>
+            <option value="Bridal Makeup">Bridal Makeup</option>
+        </select><br><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <!-- Apply inline CSS to make the submit button pink -->
+        <input type="submit" value="Submit" style="background-color: #ff007f; color: #fff; border: none; padding: 10px 20px; border-radius: 5px;">
+    </form>
+</div>
+
+
+<script>
+    function showEnrollmentForm() {
+        var form = document.getElementById("enrollmentForm");
+        form.style.display = "block";
+    }
+</script>
+
+</body>
+    </div>
+</section>
+
+<!-- Course Details -->
+<section class="course-details">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2>Course Details</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <img src="OIP.jpg" alt="Makeup Basics">
+                <h3>Makeup Basics</h3>
+                <p>Learn the fundamentals of makeup application, including skincare, foundation, and concealer.</p>
+            </div>
+            <div class="course-card">
+                <img src="advanced.jpg" alt="Advanced Techniques">
+                <h3>Advanced Techniques</h3>
+                <p>Master advanced makeup techniques such as contouring, highlighting, and eyeshadow blending.</p>
+            </div>
+            <div class="course-card">
+                <img src="bridal.jpg" alt="Bridal Makeup">
+                <h3>Bridal Makeup</h3>
+                <p>Specialize in bridal makeup artistry and create stunning looks for weddings and special occasions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .course-card:hover {
+        background-color: #ff007f;
+        color: #fff;
+    }
+    </style>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2>Student Testimonials</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"This course has transformed my makeup skills. The instructors are amazing, and the content is comprehensive. Highly recommended!"</p>
+                <p><strong>- Emily, Student</strong></p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I've always been passionate about makeup, and this course helped me turn my passion into a profession. Thank you!"</p>
+                <p><strong>- Sarah, Student</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer style="background-color: #ff007f; color: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <p>&copy; 2024 Cosmetic & Makeup Course</p>
+        <p>Contact us: 123 Main Street, City, Country</p>
+        <p>Email: info@cosmeticmakeupcourse.com</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+    
+
